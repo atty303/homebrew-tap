@@ -10,6 +10,6 @@ class Mask < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "mask", "--root", prefix, "--path", ".", "--version", version
+    system "cargo", "install", "mask", "--root", prefix, "--version", version
   end
 end
