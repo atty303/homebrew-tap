@@ -3,13 +3,13 @@ require "formula"
 class Mask < Formula
   desc "A CLI task runner defined by a simple markdown file"
   homepage "https://github.com/jakedeichert/mask"
-  url "file:///dev/null"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  version "0.3.1"
+  url "https://github.com/atty303/mask/archive/v0.3.1-p1.tar.gz"
+  sha256 "fedec03865b9c12f15540bb10935e7b664c4fa131e8d64ccadcec7512a5742c5"
+  version "0.3.1-p1"
 
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "mask", "--root", prefix, "--version", version
+    system "cargo", "install", "mask", "--root", prefix, "--path", "."
   end
 end
