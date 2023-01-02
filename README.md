@@ -1,11 +1,11 @@
 # homebrew-tap
 
-Homebrew fomulae.
+Homebrew formulae.
 
-## Fomulae
+## Formulae
 
-### [mask](https://github.com/jakedeichert/mask)
+### [sudare](https://github.com/atty303/sudare)
 
 ```
-brew install atty303/tap/mask
+brew install atty303/tap/sudare
 ```
