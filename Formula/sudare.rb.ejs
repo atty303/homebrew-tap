@@ -1,20 +1,20 @@
 class Sudare < Formula
   desc "Manage Procfile-based applications with terminal multiplexer."
   homepage "https://github.com/atty303/sudare"
-  version "0.1.0"
+  version "<%= version %>"
 
   on_macos do
     if Hardware::CPU.arm?
-      url ""
-      sha256 ""
+      url "<%= artifacts['aarch64-apple-darwin'].url %>"
+      sha256 "<%= artifacts['aarch64-apple-darwin'].sha256 %>"
 
       def install
         bin.install "sudare"
       end
     end
     if Hardware::CPU.intel?
-      url ""
-      sha256 ""
+      url "<%= artifacts['x86_64-apple-darwin'].url %>"
+      sha256 "<%= artifacts['x86_64-apple-darwin'].sha256 %>"
 
       def install
         bin.install "sudare"
@@ -24,8 +24,8 @@ class Sudare < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url ""
-      sha256 ""
+      url "<%= artifacts['x86_64-unknown-linux-gnu'].url %>"
+      sha256 "<%= artifacts['x86_64-unknown-linux-gnu'].sha256 %>"
 
       def install
         bin.install "sudare"
