@@ -1,0 +1,15 @@
+name: Update sudare
+
+on:
+  repository_dispatch:
+    types: [update-sudare]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Update formula
+        run: |
+          echo "${{ github.event.client_payload.artifacts }}"
