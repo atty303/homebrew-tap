@@ -19,5 +19,8 @@ jobs:
           template-file: Formula/sudare.rb.ejs
           output: Formula/sudare.rb
           vars: ${{ toJSON(github.event.client_payload) }}
-      - run: |
-          cat Formula/sudare.rb
+      - name: Commit the new version
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: Formula/sudare.rb
+          message: Bump version to ${{ github.event.client_payload.version }}
